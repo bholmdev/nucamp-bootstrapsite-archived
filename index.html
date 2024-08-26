@@ -239,6 +239,15 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn-danger btn-sm" id="carouselPause">
+                            <i class="fa fa-pause"></i>
+                        </button>
+                        <button class="btn-danger btn-sm" id="carouselPlay">
+                            <i class="fa fa-play"></i>
+                        </button>
+                        <i ></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -325,6 +334,16 @@
         function createAccount() {
             alert("This is a mock up website and does not store any data");
         }
+
+        $(function() {
+            $(".carousel").carousel( { interval: 2000 } );
+            $("#carouselPause").click(function(){
+                $(".carousel").carousel("pause");
+            });
+            $("#carouselPlay").click(function(){
+                $(".carousel").carousel("cycle");
+            });
+        });
     </script>
 </body>
 
